@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+    width: 200px;
+    height: 50px;
+}
+
+#save {
+    position: relative;
+    top: -150px;
+    left: 40px;
+}

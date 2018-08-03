@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Don't Translate",
+    "description": "This Chrome extension can prevent certain elements from being translated.",
+    "version": "1.0",
+    "author": "Flankyz",
+    "options_page": "options.html",
+    "browser_action": {
+        "default_icon": "tab-icon.png",
+        "default_title": "Don't Translate"
+    },
+    "background": {
+        "scripts": ["js/back.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": ["css/style.css"],
+            "js": ["js/content.js"]
+        }
+    ],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "https://*/*",
+        "http://*/*",
+        "storage"
+    ],
+    "icons": {
+        "16": "tab-icon.png"
+    }
+}
